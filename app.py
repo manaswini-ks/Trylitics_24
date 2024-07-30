@@ -86,8 +86,8 @@ def plot_sales_trend(file_path, title):
     return fig
 
 # Usage in Streamlit
-st.plotly_chart(plot_sales_trend('Datasets/sales_month_wise_90.csv', '3 month sales'))
-st.plotly_chart(plot_sales_trend('Datasets/sales_month_wise_7.csv', '1 week sales'))
+st.plotly_chart(plot_sales_trend('sales_month_wise_90.csv', '3 month sales'))
+st.plotly_chart(plot_sales_trend('sales_month_wise_7.csv', '1 week sales'))
 
 
 
@@ -95,7 +95,7 @@ st.plotly_chart(plot_sales_trend('Datasets/sales_month_wise_7.csv', '1 week sale
 ################################################################################
 #Store wise
 # Read data from CSV file
-df = pd.read_csv('Datasets/sales_store_wise_90.csv', parse_dates=['START_DATE'], dayfirst=True)
+df = pd.read_csv('sales_store_wise_90.csv', parse_dates=['START_DATE'], dayfirst=True)
 
 # Convert START_DATE to datetime
 df['START_DATE'] = pd.to_datetime(df['START_DATE'], format='%d-%m-%Y')
@@ -181,7 +181,7 @@ st.plotly_chart(fig_top_10_stores)
 
 
 # Read data from CSV file
-df = pd.read_csv('Datasets/sales_store_wise_90.csv', parse_dates=['START_DATE'], dayfirst=True)
+df = pd.read_csv('sales_store_wise_90.csv', parse_dates=['START_DATE'], dayfirst=True)
 
 # Convert START_DATE to datetime
 df['START_DATE'] = pd.to_datetime(df['START_DATE'], format='%d-%m-%Y')
@@ -256,8 +256,8 @@ st.write(negative_trends_df)
 #Promotions
 
 # Load data
-promotions_data_frame = pd.read_csv('Datasets/promotions_final.csv')
-df_monthwise_rnn = pd.read_csv('Datasets/sales_month_wise_1.csv')
+promotions_data_frame = pd.read_csv('promotions_final.csv')
+df_monthwise_rnn = pd.read_csv('sales_month_wise_1.csv')
 
 # Convert date columns to datetime objects
 promotions_data_frame['PROMOTION_START_DATE'] = pd.to_datetime(promotions_data_frame['PROMOTION_START_DATE'], format='%d/%m/%Y')
@@ -471,8 +471,8 @@ st.plotly_chart(fig4)
 
 
 def analyse_promootion_derivative():
-    promotions_data_frame = pd.read_csv('Datasets/promotions_final.csv')
-    df_monthwise_rnn = pd.read_csv('Datasets/sales_month_wise_1.csv')
+    promotions_data_frame = pd.read_csv('promotions_final.csv')
+    df_monthwise_rnn = pd.read_csv('sales_month_wise_1.csv')
 
     # Convert date columns to datetime objects
     promotions_data_frame['PROMOTION_START_DATE'] = pd.to_datetime(promotions_data_frame['PROMOTION_START_DATE'], format='%d/%m/%Y')
