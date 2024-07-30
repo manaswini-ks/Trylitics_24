@@ -1,0 +1,6 @@
+[theme]
+base="light"
+primaryColor="#2a9fc1"
+backgroundColor="#fffeff"
+backgroundImage="BG.jpg"
+font="monospace"
